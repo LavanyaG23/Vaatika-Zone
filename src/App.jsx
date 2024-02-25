@@ -7,6 +7,12 @@ import SignUpPage from './pages/SignUpPage';
 import AdminLoginPage from './pages/AdminLoginPage';
 import Home from './pages/Home'
 import AdminDashboard from './pages/AdminDashboard';
+import AdminProducts from './components/AdminProducts';
+import AdminRetailers from './components/AdminRetailers';
+import AdminFarmers from './components/AdminFarmers';
+import AdminNewProduct from './components/AdminNewProduct';
+import AdminTransactions from './components/AdminTransactions';
+
 
 // const Home = () => (
 //   <div>
@@ -35,6 +41,11 @@ const App = () => (
         <Route path="/signuppage" element={<SignUpPage />} /> {/* Route for SignUpPage */}
         <Route path="/adminloginpage" element={<AdminLoginPage />} /> {/* Route for AdminLoginPage */}
         <Route path="/admindashboard" element={<AdminDashboard />} /> Route for AdminDashboard
+        <Route path="/products" component={AdminProducts} />
+        <Route path="/retailerdata" component={AdminRetailers} />
+        <Route path="/farmerdata" component={AdminFarmers} />
+        <Route path="/addproduct" component={AdminNewProduct} />
+        <Route path="/transactions" component={AdminTransactions} />
       </Routes>
     </div>
   </BrowserRouter>

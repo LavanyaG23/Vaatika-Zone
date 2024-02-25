@@ -1,0 +1,77 @@
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue; */
+  
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Sidebar {
+    height: 100%;
+    width: 280px;
+    background-color: rgb(177, 240, 177);
+    border-right: 1px solid #ddd; /* Add a border for better separation */
+}
+
+.SidebarList {
+    padding: 0;
+    margin: 0;
+}
+
+.SidebarList .row {
+    height: 60px;
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add smooth background color transition */
+}
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: #defade; /* Change background color on hover */
+}
+
+.row #icon{
+    width: 30%;
+    text-align: center;
+}
+.row #title {
+    width: 30%; /* Equal width for icon and title */
+    text-align: center; /* Center align text */
+}
+
+.row #icon {
+    padding: 0.5px; /* Adjust padding around the icon */
+}
+
+.row #title {
+    font-size: 16px; /* Increase font size */
+    margin-left: -10px; /* Reduce margin between icon and title */
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit color from parent */
+    padding: 10px; /* Add padding for better clickability */
+    transition: background-color 0.3s; /* Add smooth background color transition */
+  }
+  
+  .link:hover {
+    background-color: #defade; /* Change background color on hover */
+  }
+
+.SidebarList .row #Active {
+    background-color: #defade;
+}
+  
