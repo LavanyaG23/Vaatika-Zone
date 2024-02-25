@@ -12,7 +12,7 @@ body {
 .Sidebar {
     height: 100%;
     width: 280px;
-    background-color: rgb(177, 240, 177);
+    background-color: rgb(214,250,227);
     border-right: 1px solid #ddd;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .SidebarList .row:hover {
-    background-color: #defade;
+    background-color: #e6f7ef;
 }
 
 .row #icon {
@@ -57,12 +57,52 @@ body {
 }
 
 .link:hover {
-    background-color: #defade;
+    background-color: #e6f7ef;
 }
 
 .SidebarList .active {
-    background-color: #defade;
+    background-color: #e6f7ef;
     color: #74c734;
 }
 
 
+/* CSS for user info section */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .user-image img {
+    width: 90px; /* Adjust the width and height as needed */
+    height: 90px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 10px;
+  }
+  
+  .welcome-message {
+    font-weight: bold;
+  }
+  
+  /* CSS for logout button */
+.logout-button {
+    margin-top: auto; /* Push the logout button to the bottom of the sidebar */
+    padding: 10px;
+  }
+  
+  .logout-button button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(16,185,129);
+    color: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .logout-button button:hover {
+    background-color: #227956;
+    color: white;
+  }
+  
+  
