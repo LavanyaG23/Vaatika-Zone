@@ -1,0 +1,35 @@
+.AdminNewProductContainer {
+    padding: 20px;
+  }
+  
+  .AdminNewProductContainer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .AdminNewProductContainer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .AdminNewProductContainer label {
+    margin-bottom: 10px;
+  }
+  
+  .AdminNewProductContainer input {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .AdminNewProductContainer button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .AdminNewProductContainer button:hover {
+    background-color: #0056b3;
+  }
+  

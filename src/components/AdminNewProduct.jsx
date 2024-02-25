@@ -1,12 +1,30 @@
-import React from 'react'
-
+import React from 'react';
+import '../AdminNewProduct.css'; // Import the CSS file
 
 const AdminNewProduct = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <div className="AdminNewProductContainer">
+      <h2>Add New Product</h2>
+      <form>
+        <label htmlFor="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" />
 
-export default AdminNewProduct
+        <label htmlFor="productCategory">Product Category:</label>
+        <input type="text" id="productCategory" name="productCategory" />
+
+        <label htmlFor="productPrice">Product Price:</label>
+        <input type="text" id="productPrice" name="productPrice" />
+
+        <label htmlFor="productQuantity">In Stock Quantity:</label>
+        <input type="text" id="productQuantity" name="productQuantity" />
+
+        <label htmlFor="productImage">Product Image:</label>
+        <input type="file" id="productImage" name="productImage" />
+
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  );
+};
+
+export default AdminNewProduct;

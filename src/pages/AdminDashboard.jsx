@@ -5,7 +5,7 @@ import '../Sidebar.css';
 
 const AdminDashboard = () => {
   return (
-    <div className='App'>
+    <div>
     </div>
   )
 }

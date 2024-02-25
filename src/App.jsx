@@ -6,7 +6,6 @@ import AdminProducts from './components/AdminProducts';
 import AdminRetailers from './components/AdminRetailers';
 import AdminFarmers from './components/AdminFarmers';
 import AdminNewProduct from './components/AdminNewProduct';
-import AdminTransactions from './components/AdminTransactions';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import AdminLoginPage from './pages/AdminLoginPage';
@@ -25,11 +24,10 @@ const App = () => (
         {/* Admin routes (with SideBar) */}
         <Route element={<AdminLayout />}>
           <Route path="/admindashboard" element={<AdminDashboard />} />
-          <Route path="/products" element={<AdminProducts />} />
-          <Route path="/retailerdata" element={<AdminRetailers />} />
-          <Route path="/farmerdata" element={<AdminFarmers />} />
-          <Route path="/addproduct" element={<AdminNewProduct />} />
-          <Route path="/transactions" element={<AdminTransactions />} />
+          <Route path="/products" component={<AdminProducts />} />
+          <Route path="/retailerdata" component={<AdminRetailers />} />
+          <Route path="/farmerdata" component={<AdminFarmers />} />
+          <Route path="/addproduct" component={<AdminNewProduct />} />
         </Route>
       </Routes>
     </div>
