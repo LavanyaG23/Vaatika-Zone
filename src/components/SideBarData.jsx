@@ -31,11 +31,11 @@ export const SideBarData = [
         icon:  <AddIcon/>,
         link:  "/addproduct"
     },
-    {
-        title: "Transactions",
-        icon:  <ReceiptLongIcon/>,
-        link:  "/transactions"
-    },
+    // {
+    //     title: "Transactions",
+    //     icon:  <ReceiptLongIcon/>,
+    //     link:  "/transactions"
+    // },
     
 
 ]

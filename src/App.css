@@ -2,13 +2,8 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: lightblue; */
-  
 }
-  
+
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +13,7 @@ body {
     height: 100%;
     width: 280px;
     background-color: rgb(177, 240, 177);
-    border-right: 1px solid #ddd; /* Add a border for better separation */
+    border-right: 1px solid #ddd;
 }
 
 .SidebarList {
@@ -27,51 +22,47 @@ body {
 }
 
 .SidebarList .row {
-    height: 60px;
+    height: 70px;
     list-style-type: none;
     display: flex;
-    align-items: center; /* Center items vertically */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Add smooth background color transition */
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .SidebarList .row:hover {
-    cursor: pointer;
-    background-color: #defade; /* Change background color on hover */
-}
-
-.row #icon{
-    width: 30%;
-    text-align: center;
-}
-.row #title {
-    width: 30%; /* Equal width for icon and title */
-    text-align: center; /* Center align text */
+    background-color: #defade;
 }
 
 .row #icon {
-    padding: 0.5px; /* Adjust padding around the icon */
+    width: 30%;
+    text-align: center;
+    padding: 0 5px; /* Add space around the icon */
 }
 
 .row #title {
-    font-size: 16px; /* Increase font size */
-    margin-left: -10px; /* Reduce margin between icon and title */
+    width: 30%; /* Adjust width for title */
+    text-align: left; /* Align text to the left */
+    font-size: 16px;
+    margin-left: 10px; /* Add space between icon and title */
 }
 
 .link {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Remove default underline */
-    color: inherit; /* Inherit color from parent */
-    padding: 10px; /* Add padding for better clickability */
-    transition: background-color 0.3s; /* Add smooth background color transition */
-  }
-  
-  .link:hover {
-    background-color: #defade; /* Change background color on hover */
-  }
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
 
-.SidebarList .row #Active {
+.link:hover {
     background-color: #defade;
 }
-  
+
+.SidebarList .active {
+    background-color: #defade;
+    color: #74c734;
+}
+
+
