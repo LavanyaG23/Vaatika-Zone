@@ -2,6 +2,7 @@ import React from 'react';
 import '../AdminNewProduct.css'; // Import the CSS file
 
 const AdminNewProduct = () => {
+  console.log('Rendering AdminNewProduct component');
   return (
     <div className="AdminNewProductContainer">
       <h2>Add New Product</h2>

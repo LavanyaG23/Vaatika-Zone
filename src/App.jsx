@@ -22,12 +22,12 @@ const App = () => (
         <Route path="/adminloginpage" element={<AdminLoginPage />} />
 
         {/* Admin routes (with SideBar) */}
-        <Route element={<AdminLayout />}>
+        <Route path="/adminlayout" element={<AdminLayout />}>
           <Route path="/admindashboard" element={<AdminDashboard />} />
-          <Route path="/products" component={<AdminProducts />} />
-          <Route path="/retailerdata" component={<AdminRetailers />} />
-          <Route path="/farmerdata" component={<AdminFarmers />} />
-          <Route path="/addproduct" component={<AdminNewProduct />} />
+          <Route path="/products" element={<AdminProducts />} />
+          <Route path="/retailerdata" element={<AdminRetailers />} />
+          <Route path="/farmerdata" element={<AdminFarmers />} />
+          <Route path="/addproduct" element={<AdminNewProduct />} />
         </Route>
       </Routes>
     </div>
