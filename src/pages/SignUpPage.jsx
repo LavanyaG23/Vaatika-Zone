@@ -37,21 +37,24 @@ const SignUpPage = () => {
           <h1 className="text-4xl mb-6">Let's get started</h1>
           <form onSubmit={handleSubmit}>
             <div className='relative my-4'>
-              <input type="username" className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Username' />
+              <input type="username" required className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Username' />
               <BiUser className='absolute top-3 right-3' />
             </div>
             <div className='relative my-4'>
-              <input type="email" className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Email' />
+              <input type="email" required className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Email' />
               <HiOutlineMail className='absolute top-3 right-3' />
             </div>
             <div className='relative my-4'>
-              <input type={passwordVisible ? "text" : "password"} className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Password' />
+              <input type="tel" required className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Mobile number' />
+            </div>
+            <div className='relative my-4'>
+              <input type={passwordVisible ? "text" : "password"} required className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Password' />
               <span className="absolute top-3 right-3" onClick={togglePasswordVisibility}>
                 {passwordVisible ? <AiOutlineEyeInvisible className="text-xl text-gray-400 cursor-pointer" /> : <AiOutlineEye className="text-xl text-gray-400 cursor-pointer" />}
               </span>
             </div>
             <div className='relative my-4'>
-              <input type={confirmPasswordVisible ? "text" : "password"} className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Confirm password' />
+              <input type={confirmPasswordVisible ? "text" : "password"} required className='block w-full py-2.5 px-3 text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer' placeholder='Confirm password' />
               <span className="absolute top-3 right-3" onClick={toggleConfirmPasswordVisibility}>
                 {confirmPasswordVisible ? <AiOutlineEyeInvisible className="text-xl text-gray-400 cursor-pointer" /> : <AiOutlineEye className="text-xl text-gray-400 cursor-pointer" />}
               </span>
@@ -59,11 +62,11 @@ const SignUpPage = () => {
             <div className='relative my-4'>
               <p className='text-gray-700 mb-2'>User Type?</p>
               <label className="inline-flex items-center">
-                <input type="radio" className="form-radio" name="userType" value="farmer" checked={userType === "farmer"} onChange={() => handleUserTypeChange("farmer")} />
+                <input type="radio" className="form-radio" name="userType" value="farmer" required checked={userType === "farmer"} onChange={() => handleUserTypeChange("farmer")} />
                 <span className="ml-2">Farmer</span>
               </label>
               <label className="inline-flex items-center ml-6">
-                <input type="radio" className="form-radio" name="userType" value="retailer" checked={userType === "retailer"} onChange={() => handleUserTypeChange("retailer")} />
+                <input type="radio" className="form-radio" name="userType" value="retailer" required checked={userType === "retailer"} onChange={() => handleUserTypeChange("retailer")} />
                 <span className="ml-2">Retailer</span>
               </label>
             </div>

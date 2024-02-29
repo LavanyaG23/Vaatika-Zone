@@ -89,6 +89,9 @@ body {
 .logout-button {
     margin-top: auto; /* Push the logout button to the bottom of the sidebar */
     padding: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   
   .logout-button button {
