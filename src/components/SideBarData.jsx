@@ -8,7 +8,7 @@ export const SideBarData = [
     {
         title: "Dashboard",
         icon:  <DashboardIcon/>,
-        link:  "/adminlayout/dashboard"
+        link:  "/adminlayout/adminlayout"
     },
     {
         title: "Products",
