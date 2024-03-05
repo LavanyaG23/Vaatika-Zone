@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import productsData from './productsData';
 import '../AdminProducts.css';
 
-const AdminProducts = () => {
+const FarmerProducts = () => {
   const [sortBy, setSortBy] = useState(''); // State to track selected sorting option
   const [searchQuery, setSearchQuery] = useState(''); // State to track search query
 
@@ -85,7 +85,6 @@ const AdminProducts = () => {
             <th>Price (Rs.)</th>
             <th>Quantity</th>
             <th>Date</th>
-            <th>Listed By</th> {/* New column for who listed the product */}
           </tr>
         </thead>
         <tbody>
@@ -97,7 +96,6 @@ const AdminProducts = () => {
               <td>{product.price}</td>
               <td>{product.quantity}</td>
               <td>{product.date}</td>
-              <td>{product.listedby}</td> {/* Display who listed the product */}
             </tr>
           ))}
         </tbody>
@@ -106,4 +104,4 @@ const AdminProducts = () => {
   );
 };
 
-export default AdminProducts;
+export default FarmerProducts;

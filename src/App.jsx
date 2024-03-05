@@ -56,11 +56,17 @@ import AdminProducts from './components/AdminProducts';
 import AdminRetailers from './components/AdminRetailers';
 import AdminFarmers from './components/AdminFarmers';
 import AdminNewProduct from './components/AdminNewProduct';
+import AdminProfile from './components/AdminProfile';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import AdminLoginPage from './pages/AdminLoginPage';
 import Home from './pages/Home';
 import AdminLayout from './pages/AdminLayout';
+import FarmerDashboard from './pages/FarmerDashboard';
+import FarmerProducts from './components/FarmerProducts';
+import RetailerDashboard from './pages/RetailerDashboard';
+import RetailerProducts from './components/RetailerProducts';
+import RetailerWishlist from './components/RetailerWishlist';
 
 const App = () => (
   <BrowserRouter>
@@ -84,6 +90,19 @@ const App = () => (
               <Route path="retailerdata" element={<AdminRetailers />} />
               <Route path="farmerdata" element={<AdminFarmers />} />
               <Route path="addproduct" element={<AdminNewProduct />} />
+              <Route path="profile" element={<AdminProfile />} />
+            </Route>
+
+            <Route path="/farmerdashboard/*" element={<FarmerDashboard/>}>
+              <Route path="products" element={<FarmerProducts />}/>
+              <Route path="addproduct" element={<AdminNewProduct/>}/>
+              <Route path="profile" element={<AdminProfile/>}/>
+            </Route>
+
+            <Route path="/retailerdashboard/*" element={<RetailerDashboard/>}>
+              <Route path="allproducts" element={<RetailerProducts/>}/>
+              <Route path="wishlist" element={<RetailerWishlist/>}/>
+              <Route path="profile" element={<AdminProfile/>}/>
             </Route>
           </Routes>
         {/* </div>

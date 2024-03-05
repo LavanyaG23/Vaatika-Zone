@@ -26,6 +26,7 @@ import people03 from "./people03.png";
 import farm2market from "./farm2market.avif";
 import logo1 from "./logo1.jpg";
 import instagramIcon from "./instagram-icon.jpg";
+import UserProfilePic from "./user-profile-pic.avif";
 
 export {
   airbnb,
@@ -55,5 +56,6 @@ export {
   people03,
   farm2market,
   logo1,
-  instagramIcon
+  instagramIcon,
+  UserProfilePic
 };

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineUnlock, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignInPage = () => {
   const [userType, setUserType] = useState(null);
   const [passwordShown, setPasswordShown] = useState(false);
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleUserTypeChange = (type) => {
     setUserType(type);
@@ -26,7 +27,13 @@ const SignInPage = () => {
       alert('Please select your user type.');
       return;
     }
-    // Proceed with form submission
+
+    // Redirect based on selected user type
+    if (userType === "farmer") {
+      navigate("/farmerdashboard");
+    } else if (userType === "retailer") {
+      navigate("/retailerdashboard");
+    }
   };
 
   return (
@@ -52,9 +59,9 @@ const SignInPage = () => {
             </div>
             <div className='flex justify-between items-center mb-4'>
               <div className='flex gap-2 items-center'>
-                <input type="checkbox" name="userType" id="farmer" className="text-emerald-500 focus:ring-emerald-500" checked={userType === "farmer"} onChange={() => handleUserTypeChange("farmer")} />
+                <input type="radio" name="userType" id="farmer" className="text-emerald-500 focus:ring-emerald-500" value="farmer" checked={userType === "farmer"} onChange={() => handleUserTypeChange("farmer")} />
                 <label htmlFor='farmer' className="text-gray-500">Farmer</label>
-                <input type="checkbox" name="userType" id="retailer" className="text-emerald-500 focus:ring-emerald-500" checked={userType === "retailer"} onChange={() => handleUserTypeChange("retailer")} />
+                <input type="radio" name="userType" id="retailer" className="text-emerald-500 focus:ring-emerald-500" value="retailer" checked={userType === "retailer"} onChange={() => handleUserTypeChange("retailer")} />
                 <label htmlFor='retailer' className="text-gray-500">Retailer</label>
               </div>
             </div>

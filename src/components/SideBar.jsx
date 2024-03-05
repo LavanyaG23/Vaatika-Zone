@@ -15,7 +15,7 @@ const SideBar = () => {
   const handleLogout = () => {
     // Perform logout actions (e.g., clear user session, etc.)
     // Navigate to the home page
-    navigate("/adminloginpage");
+    navigate("/");
   };
 
   return (
