@@ -15,7 +15,7 @@ const AdminLoginPage = () => {
     e.preventDefault();
     // Perform login logic here
     // If login is successful, navigate to admin dashboard
-    navigate('/admindashboard'); // Use navigate instead of history.push
+    navigate('/adminlayout'); // Use navigate instead of history.push
   };
 
   return (
