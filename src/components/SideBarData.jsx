@@ -8,27 +8,27 @@ export const SideBarData = [
     {
         title: "Dashboard",
         icon:  <DashboardIcon/>,
-        link:  "/admindashboard"
+        link:  "/adminlayout/dashboard"
     },
     {
         title: "Products",
         icon:  <InventoryIcon/>,
-        link:  "/products"
+        link:  "/adminlayout/products"
     },
     {
         title: "Retailers",
         icon:  <PersonIcon/>,
-        link:  "/retailerdata"
+        link:  "/adminlayout/retailerdata"
     },
     {
         title: "Farmers",
         icon:  <PeopleOutlineIcon/>,
-        link:  "/farmerdata"
+        link:  "/adminlayout/farmerdata"
     },
     {
         title: "Add Product",
         icon:  <AddIcon/>,
-        link:  "/addproduct"
+        link:  "/adminlayout/addproduct"
     },
     // {
     //     title: "Transactions",

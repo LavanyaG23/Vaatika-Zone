@@ -52,7 +52,7 @@
 import React from 'react';
 import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
 import SideBar from './components/SideBar'; // Import the SideBar component
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminLayout';
 import AdminProducts from './components/AdminProducts';
 import AdminRetailers from './components/AdminRetailers';
 import AdminFarmers from './components/AdminFarmers';
@@ -61,6 +61,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import AdminLoginPage from './pages/AdminLoginPage';
 import Home from './pages/Home';
+import AdminLayout from './pages/AdminLayout';
 
 const App = () => (
   <BrowserRouter>
@@ -73,31 +74,34 @@ const App = () => (
         <Route path="/adminloginpage" element={<AdminLoginPage />} />
       </Routes>
 
-      <div className='App'>
+      {/* <div className='App'>
         <div>
           <SideBar />
         </div>
-        <div>
-          <Routes>
+        <div> */}
+          <Routes >
             {/* Admin routes (with SideBar) */}
-            <Route path="/admindashboard" element={<AdminDashboard />} />
-            <Route path="/products" element={<AdminProducts />} />
-            <Route path="/retailerdata" element={<AdminRetailers />} />
-            <Route path="/farmerdata" element={<AdminFarmers />} />
-            <Route path="/addproduct" element={<AdminNewProduct />} />
+            <Route path="/adminlayout/*" element={<AdminLayout/>}>
+              <Route path="dashboard" element={<AdminDashboard />} />
+              <Route path="products" element={<AdminProducts />} />
+              <Route path="retailerdata" element={<AdminRetailers />} />
+              <Route path="farmerdata" element={<AdminFarmers />} />
+              <Route path="addproduct" element={<AdminNewProduct />} />
+            </Route>
           </Routes>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
     </div>
   </BrowserRouter>
+
 );
 
-const AdminLayout = ({ children }) => (
-  // <div className='App'>
-  <div>
-    <SideBar />
-    <div>{children}</div>
-  </div>
-);
+// const AdminLayout = ({ children }) => (
+//   // <div className='App'>
+//   <div>
+//     <SideBar />
+//     <div>{children}</div>
+//   </div>
+// );
 
 export default App;
