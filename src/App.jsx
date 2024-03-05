@@ -72,14 +72,12 @@ const App = () => (
         <Route path="/signinpage" element={<SignInPage />} />
         <Route path="/signuppage" element={<SignUpPage />} />
         <Route path="/adminloginpage" element={<AdminLoginPage />} />
-      </Routes>
 
       {/* <div className='App'>
         <div>
           <SideBar />
         </div>
         <div> */}
-          <Routes >
             {/* Admin routes (with SideBar) */}
             <Route path="/adminlayout/*" element={<AdminLayout/>}>
               <Route path="dashboard" element={<AdminDashboard />} />
