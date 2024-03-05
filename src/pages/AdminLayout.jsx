@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import SideBar from '../components/SideBar';
 import AdminDashboard from '../components/AdminDashboard';
 import AdminProducts from '../components/AdminProducts';
@@ -20,6 +20,7 @@ const AdminLayout = () => {
           <Route path="/adminlayout/farmerdata" element={<AdminFarmers />} />
           <Route path="/adminlayout/addproduct" element={<AdminNewProduct />} />
         </Routes>
+        <Outlet/>
       </div>
     </div>
   );

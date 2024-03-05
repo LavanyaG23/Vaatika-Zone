@@ -50,8 +50,7 @@
 
 
 import React from 'react';
-import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
-import SideBar from './components/SideBar'; // Import the SideBar component
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AdminDashboard from './pages/AdminLayout';
 import AdminProducts from './components/AdminProducts';
 import AdminRetailers from './components/AdminRetailers';
