@@ -4,7 +4,7 @@ import { SideBarData } from './SideBarData';
 import { people02 } from '../assets';
 
 const SideBar = () => {
-  const history = useNavigate(); // Initialize useHistory hook
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   // Dummy user data (replace with actual user data)
   const user = {
@@ -15,7 +15,7 @@ const SideBar = () => {
   const handleLogout = () => {
     // Perform logout actions (e.g., clear user session, etc.)
     // Navigate to the home page
-    history("/adminloginpage");
+    navigate("/");
   };
 
   return (

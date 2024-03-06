@@ -14,6 +14,12 @@ body {
     width: 280px;
     background-color: rgb(214,250,227);
     border-right: 1px solid #ddd;
+    overflow-y: auto;
+    
+}
+
+.Sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .SidebarList {
@@ -74,8 +80,8 @@ body {
   }
   
   .user-image img {
-    width: 90px; /* Adjust the width and height as needed */
-    height: 90px;
+    width: 70px; /* Adjust the width and height as needed */
+    height: 70px;
     border-radius: 50%; /* Make the image circular */
     object-fit: cover; /* Maintain aspect ratio */
     margin-right: 10px;
@@ -89,9 +95,10 @@ body {
 .logout-button {
     margin-top: auto; /* Push the logout button to the bottom of the sidebar */
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 10px;
   }
   
   .logout-button button {

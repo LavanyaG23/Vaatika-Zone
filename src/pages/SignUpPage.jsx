@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { BiUser } from "react-icons/bi";
 import { AiOutlineUnlock, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUpPage = () => {
   const [userType, setUserType] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleUserTypeChange = (type) => {
     setUserType(type);
@@ -19,7 +20,12 @@ const SignUpPage = () => {
       alert('Please select your user type.');
       return;
     }
-    // Proceed with form submission
+    // Redirect based on selected user type
+    if (userType === "farmer") {
+      navigate("/farmerdashboard");
+    } else if (userType === "retailer") {
+      navigate("/retailerdashboard");
+    }
   };
 
   const togglePasswordVisibility = () => {
