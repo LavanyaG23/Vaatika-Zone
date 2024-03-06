@@ -8,7 +8,7 @@ export const RetailerSideBarData = [
     {
         title: "All Products",
         icon:  <InventoryIcon/>,
-        link:  "/retailerdashboard/products"
+        link:  "/retailerdashboard/allproducts"
     },
     {
         title: "Wishlist",
