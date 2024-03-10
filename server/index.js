@@ -35,6 +35,12 @@ app.get('/api/users', (req, res) => {
   });
 });
 
+
+//Routers
+const productsRouter = require('./routes/Products');
+app.use("/products", productsRouter);
+
+
 // Start the server
 app.listen(3001, () => {
     console.log('Server is running on port 3001');
